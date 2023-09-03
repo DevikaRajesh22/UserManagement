@@ -1,0 +1,82 @@
+ <%- include('../header') %>
+ <!-- navbar  -->
+ <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+    <div class="container">
+      <a class="navbar-brand" style="color: white;" href="#">Admin Panel</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <form class="d-flex  justify-content-end" action="/logout" method="post">
+          <button type="submit" class="btn btn-outline-light justify-content-end">Logout</button>
+        </form>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- contents -->
+  <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+    <h1 class="h2 text-primary">Customer</h1>
+    <div class="btn-toolbar mb-2 mb-md-0">
+      <div class="btn-group me-2">
+        <button class="btn btn-sm btn-outline-primary">?</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="col py-3">
+    <div class="row">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/">Dashboard</a></li>
+                <li class="breadcrumb-item active">New customer</li>
+            </ol>
+        </nav>
+    </div>
+  </div>
+
+  <!-- form -->
+  <div class="container bg-white py-2" style="width: 550px;border-radius: 10px;
+  box-shadow: 5px 10px 28px;">
+    <form action="/admin/add" method="POST">
+      <div class="row form-group mb-4">
+          <div class="col">
+              <label for="firstname">First name</label>
+              <input type="text" class="form-control" id="firstname" name="firstname" value="" placeholder="First Name" required>
+          </div>
+          <div class="col">
+              <label for="lastname">Last name</label>
+              <input type="text" class="form-control" id="lastname" name="lastname" value="" placeholder="Last Name" required>
+          </div>
+      </div>
+      <div class="row form-group mb-4">
+          <div class="col">
+              <label for="number">Contact number</label>
+              <input type="number" class="form-control" id="number" name="number" value="" placeholder="Number" required>
+          </div>
+          <div class="col">
+              <label for="email">Email</label>
+              <input type="text" class="form-control" id="email" name="email" value="" placeholder="user@email.com" required>
+          </div>
+      </div>
+      <div class="row form-group mb-4">
+          <div class="col">
+              <label for="uname">Username</label>
+              <input type="text" class="form-control" id="uname" name="uname" value="" placeholder="Username" required>
+          </div>
+          <div class="col">
+              <label for="password">Password</label>
+              <input type="password" class="form-control" id="password" name="password" value="" placeholder="Password" required>
+          </div>
+      </div>
+      <div class="row form-group mb-4">
+          <button type="submit" class="btn btn-primary" type="submit">Add customer</button>
+      </div>
+      
+    </form>
+  </div>
+  
+
+  <%- include('../footer') %>

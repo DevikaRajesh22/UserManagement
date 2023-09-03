@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-image: url('/images/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+/* .wraper {
+
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+
+.center-div {
+    padding-top: 10%;
+}
+
+.btn.btn-success {
+    padding: .4em 2em;
+}
+
+form {
+    padding: 0 3em;
+}
+
+
+.form-control {
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+btn {
+    width: 130px;
+}
+
+#login .title>span {
+    font-size: .8em;
+}
+
+#form-block {
+    background-color: beige;
+    border-radius: 10px;
+    box-shadow: 5px 10px 28px;
+}
+
+.card {
+    border-radius: 10px;
+    box-shadow: 5px 10px 28px;
+    cursor: pointer;
+    transition: .3s transform cubic-bezier(.155, 1.105, .295, 1.12), .3s box-shadow, .3s -webkit-transform cubic-bezier(.155, 1.105, .295, 1.12);
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+
+
+#dashboard-block {
+    background-color: beige;
+    border-radius: 10px;
+    box-shadow: 5px 10px 28px;
+}
+
+.nav-link {
+    color: white;
+}
+
+.custom-link{
+    text-decoration: none;
+    color: white;
+}
+
+.custom-link:hover{
+    text-decoration: none;
+    color: white;
+}

@@ -1,0 +1,33 @@
+<%- include('header') %>
+<section class="wraper">
+  <div class="container text-center center-div" id="login">
+      <div class="container w-25 border py-5" id="form-block">
+          <div class="title pb-5">
+              <h2 class="font-weight-bold">Signup</h2>
+              <span>Signup for new users</span>
+          </div>
+          <form action="/signup" method="post">
+            <div class="form-group">
+                <input type="text" class="form-control" name="firstName" placeholder="First name">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" name="lastName" placeholder="Last name">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="userName" placeholder="Username">
+          </div>
+              <div class="form-group">
+                  <input type="email" class="form-control" placeholder="user@email.com" name="email">
+              </div>
+              <div class="form-group">
+                <input type="number" class="form-control" name="number" placeholder="number">
+            </div>
+              <div class="form-group">
+                  <input type="password" class="form-control" name="password" placeholder="password">
+              </div>
+              <button type="submit" class="btn my-3 btn-primary rounded-pill mx-1">Submit</button>
+          </form>
+      </div>
+  </div>
+</section>
+<%- include('footer') %>

@@ -1,0 +1,13 @@
+module.exports={
+    userAuthentication:(req,res,next)=>{
+        try{
+            if(req.session.user){
+                next();
+            }else{
+                res.render('base');
+            }
+        }catch(error){
+            console.log(error);
+        }
+    }
+}

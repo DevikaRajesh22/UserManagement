@@ -1,0 +1,54 @@
+<%- include('header') %>
+
+<!-- navbar  -->
+<nav class="navbar navbar-expand-lg navbar-light bg-primary">
+    <div class="container">
+      <a class="navbar-brand" style="color: white;" href="#">Admin Panel</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <form class="nav col-12 md-auto flex-fill mb-2 justify-content-center mb-md-0" role="search" method="POST" action="/admin/search">
+        <input type="search" name="searchTerm" class="form-control form-control-dark w-100 rounded-0 border-0" placeholder="Search..." aria-label="Search">
+      </form>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <form class="d-flex  justify-content-end" action="/logout" method="post">
+          <a href="/admin/dashboard"><button type="submit" class="btn btn-outline-light justify-content-end">Back</button></a> 
+          <button type="submit" class="btn btn-outline-light justify-content-end">Logout</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container" style="width: 2000px;">
+  <div class="table-responsive">
+    <% if (customers!="") { %>
+        <table class="table table-striped table-sm">
+            <thead>
+                <tr>
+                    <th scope="col">First Name</th>
+                    <th scope="col">Last Name</th>
+                    <th scope="col">username</th>
+                    <th scope="col">Contact Number</th>
+                    <th scope="col">Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% customers.forEach(element => { %>
+                    <tr class="align-middle">
+                    <td><%= element.firstName %></td>
+                    <td><%= element.lastName %></td>
+                    <td><%= element.userName %></td>
+                    <td><%= element.number %></td>
+                    <td><%= element.email %></td>
+                </tr>
+                <% }) %>
+            </tbody>
+        </table>
+    <% } else { %>
+        <h2>No results found.</h2>
+        <% } %>
+  </div>
+</div>
+
+  <%- include('footer') %>
