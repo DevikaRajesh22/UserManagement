@@ -10,13 +10,13 @@ const customer = require('../models/customer');
 userRouter.post('/login',async (req, res) => {
     let email=req.body.email
     let passowrd=req.body.password
-
     const user=await customer.findOne({email:email});
     if(user){
-        console.log('user is ere',user);
+        if(user.email=== req.body.email && user.password === req.body.password){
+            res.render('userdash')
+        }
     }else{
-console.log(req.body);
-const admin=await adminSchema.findOne({email:email})
+   const admin=await adminSchema.findOne({email:email})
         if (admin) { 
 
             console.log('adim ',admin);//storing cookie

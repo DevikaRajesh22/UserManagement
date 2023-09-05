@@ -70,7 +70,7 @@ exports.postCustomer=async (req,res)=>{
     try{
         await Customer.create(newCustomer);
         await req.flash('info','New customer has been added');
-        res.redirect('/');
+        res.redirect('/admin/dashboard');
     }catch(error){
         console.log(error);
     }
